@@ -19,35 +19,40 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('blog'); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'swiftionportfolio' ); ?></a>
+	<nav class="navbar navbar-expand-xl fixed-top swiftion-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">Swiftion</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                </ul>
 
-		<header id="masthead" class="<?php echo is_singular() && swiftionportfolio_can_show_post_thumbnail() ? 'site-header featured-image' : 'site-header'; ?>">
-
-			<div class="site-branding-container">
-				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
-			</div><!-- .site-branding-container -->
-
-			<?php if ( is_singular() && swiftionportfolio_can_show_post_thumbnail() ) : ?>
-				<div class="site-featured-image">
-					<?php
-						swiftionportfolio_post_thumbnail();
-						the_post();
-						$discussion = ! is_page() && swiftionportfolio_can_show_post_thumbnail() ? swiftionportfolio_get_discussion_data() : null;
-
-						$classes = 'entry-header';
-					if ( ! empty( $discussion ) && absint( $discussion->responses ) > 0 ) {
-						$classes = 'entry-header has-discussion';
-					}
-					?>
-					<div class="<?php echo $classes; ?>">
-						<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
-					</div><!-- .entry-header -->
-					<?php rewind_posts(); ?>
-				</div>
-			<?php endif; ?>
-		</header><!-- #masthead -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/#header">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/#service">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll active" href="/blog/">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 	<div id="content" class="site-content">
