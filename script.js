@@ -17,7 +17,7 @@ $(function() {
 });
 
 // Active links
-$('body').scrollspy({ target: 'nav', offset: 70 });
+$('body').scrollspy({ target: '.home nav', offset: 70 });
 
 //Typewriter
 $(function() {
