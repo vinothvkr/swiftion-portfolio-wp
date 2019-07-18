@@ -1,0 +1,226 @@
+<?php
+/**
+ * The header for our theme
+ *
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package WordPress
+ * @subpackage Twenty_Nineteen
+ * @since 1.0.0
+ */
+?><!doctype html>
+<html <?php language_attributes(); ?>>
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+
+    <nav class="navbar navbar-expand-xl fixed-top swiftion-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">Swiftion</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#service">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="header-content-left">
+                            <h4>Hello I'm</h4>
+                            <h1>Vinoth Kumar</h1>
+                            <h2>Professional <span>.NET/C# Web Developer</span></h2>
+                            <div class="typewriter" id="typewriter">
+                                <span class="type"></span>
+                                <span class="cursor">_</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-none d-md-block">
+                        <div class="header-content-right">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>About</h2>
+                    <div class="section-content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer feugiat scelerisque varius morbi enim nunc faucibus a. Pellentesque habitant morbi tristique senectus et. Proin fermentum leo vel orci porta non pulvinar neque. Tellus molestie nunc non blandit massa. Viverra mauris in aliquam sem. Ac turpis egestas integer eget aliquet nibh. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. Magnis dis parturient montes nascetur ridiculus mus mauris vitae. Ultrices sagittis orci a scelerisque purus semper eget duis. Sed enim ut sem viverra aliquet eget sit amet. Sed viverra tellus in hac habitasse platea dictumst. Facilisis mauris sit amet massa vitae. Nec feugiat nisl pretium fusce. Iaculis eu non diam phasellus vestibulum lorem. Tristique senectus et netus et malesuada fames.
+                        </p>
+                        <p>
+                            Ipsum dolor sit amet consectetur adipiscing. Quis hendrerit dolor magna eget. Maecenas accumsan lacus vel facilisis volutpat est. Ullamcorper dignissim cras tincidunt lobortis feugiat. Neque aliquam vestibulum morbi blandit cursus. In massa tempor nec feugiat nisl pretium fusce. Auctor neque vitae tempus quam. Enim eu turpis egestas pretium aenean. Est lorem ipsum dolor sit amet consectetur adipiscing elit. Vitae turpis massa sed elementum tempus egestas. Neque convallis a cras semper auctor neque. Semper auctor neque vitae tempus quam pellentesque. Pharetra magna ac placerat vestibulum. Velit euismod in pellentesque massa placerat duis ultricies lacus. Bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim. Lorem ipsum dolor sit amet consectetur adipiscing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service" class="service">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Service</h2>
+                    <div class="section-content">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="icon">
+                                        <i class="fas fa-columns"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Web Development</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="icon">
+                                        <i class="fas fa-paint-brush"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Web Design</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Software Development</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="icon">
+                                        <i class="fas fa-server"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Deployment</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Contact</h2>
+                    <div class="section-content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form class="contact-form">
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control form-control-lg" id="email" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="name" class="form-control form-control-lg" id="name" placeholder="Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control form-control-lg" placeholder="Message"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248756.1167537794!2d80.06892521258872!3d13.047487786031711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C+Tamil+Nadu!5e0!3m2!1sen!2sin!4v1562860543908!5m2!1sen!2sin" width="570" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="blog footer-col">
+                        <h4>Blog</h4>
+                        <ul>
+                            <li><a href="https://www.swiftion.in/blog/2018/08/allow-action-method-to-be-accessed-only-by-anonymous-user-in-asp-net-core-mvc/">Allow action method to be accessed only by anonymous user in Asp.Net Core MVC</a></li>
+                            <li><a href="https://www.swiftion.in/blog/2018/08/logging-exceptions-into-database-with-asp-net-core/">Logging Exceptions into Database with Asp.Net Core</a></li>
+                            <li><a href="https://www.swiftion.in/blog/2018/07/enable-submit-button-if-at-least-one-input-has-value/">Enable submit button if at least one input has value</a></li>
+                            <li><a href="https://www.swiftion.in/blog/2018/07/how-to-setup-a-firewall-with-ufw-on-ubuntu-18-04/">How to setup a Firewall with UFW on Ubuntu 18.04</a></li>
+                            <li><a href="https://www.swiftion.in/blog/2018/07/how-to-install-znc-on-ubuntu-18-04/">How to install ZNC on Ubuntu 18.04</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-col"></div>
+                <div class="col-md-4">
+                    <div class="social footer-col">
+                        <h4>Social Media</h4>
+                        <span class="fa-stack"><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/vinoobubbly"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-twitter fa-stack-1x"></i></a></span>
+                        <span class="fa-stack"><a target="_blank" rel="noopener noreferrer" href="https://github.com/vinothvkr"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-github fa-stack-1x"></i></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6 copyright">Swiftion All rights reserved. Powered by 
+                        <a href="https://wordpress.org/" target="_blank">Wordpress</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+<?php wp_footer(); ?>
+</body>
+</html>

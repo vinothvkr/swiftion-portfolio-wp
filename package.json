@@ -1,0 +1,38 @@
+{
+  "name": "swiftion-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -c-1 -o http://127.0.0.1:8080/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinothvkr/swiftion-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinothvkr/swiftion-portfolio/issues"
+  },
+  "homepage": "https://github.com/vinothvkr/swiftion-portfolio#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "jquery.easing": "^1.4.1",
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-qunit": "^3.1.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "http-server": "^0.11.1"
+  }
+}
