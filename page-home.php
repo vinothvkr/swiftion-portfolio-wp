@@ -44,6 +44,9 @@
                         <a class="nav-link page-scroll" href="#service">Service</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/blog/">Blog</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
