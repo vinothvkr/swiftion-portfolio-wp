@@ -67,11 +67,11 @@ if ( ! function_exists( 'swiftionportfolio_comment_count' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'swiftionportfolio_entry_footer' ) ) :
+if ( ! function_exists( 'swiftionportfolio_entry_meta' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function swiftionportfolio_entry_footer() {
+	function swiftionportfolio_entry_meta() {
 
 		// Hide author, post date, category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
@@ -95,16 +95,16 @@ if ( ! function_exists( 'swiftionportfolio_entry_footer' ) ) :
 			}
 
 			/* translators: used between list items, there is a space after the comma. */
-			$tags_list = get_the_tag_list( '', __( ', ', 'swiftionportfolio' ) );
-			if ( $tags_list ) {
-				printf(
-					/* translators: 1: SVG icon. 2: posted in label, only visible to screen readers. 3: list of tags. */
-					'<span class="tags-links">%1$s<span class="screen-reader-text">%2$s </span>%3$s</span>',
-					swiftionportfolio_get_icon_svg( 'tag', 16 ),
-					__( 'Tags:', 'swiftionportfolio' ),
-					$tags_list
-				); // WPCS: XSS OK.
-			}
+			// $tags_list = get_the_tag_list( '', __( ', ', 'swiftionportfolio' ) );
+			// if ( $tags_list ) {
+			// 	printf(
+			// 		/* translators: 1: SVG icon. 2: posted in label, only visible to screen readers. 3: list of tags. */
+			// 		'<span class="tags-links">%1$s<span class="screen-reader-text">%2$s </span>%3$s</span>',
+			// 		swiftionportfolio_get_icon_svg( 'tag', 16 ),
+			// 		__( 'Tags:', 'swiftionportfolio' ),
+			// 		$tags_list
+			// 	); // WPCS: XSS OK.
+			// }
 		}
 
 		// Comment count.
@@ -147,17 +147,25 @@ if ( ! function_exists( 'swiftionportfolio_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
 
-			<figure class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+			<figure class="entry-featured-image">
+				<?php the_post_thumbnail(
+					'swiftionportfolio-featured', array(
+						'class' => 'single-featured',
+					)
+				); ?>
 			</figure><!-- .post-thumbnail -->
 
 			<?php
 		else :
 			?>
 
-		<figure class="post-thumbnail">
-			<a class="post-thumbnail-inner" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-				<?php the_post_thumbnail( 'post-thumbnail' ); ?>
+		<figure class="entry-featured-image">
+			<a class="entry-featured-image-inner" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" aria-hidden="true" tabindex="-1">
+				<?php the_post_thumbnail(
+					'swiftionportfolio-featured', array(
+						'class' => 'single-featured',
+					)
+				); ?>
 			</a>
 		</figure>
 
@@ -220,22 +228,39 @@ if ( ! function_exists( 'swiftionportfolio_the_posts_navigation' ) ) :
 	/**
 	 * Documentation for function.
 	 */
-	function swiftionportfolio_the_posts_navigation() {
-		the_posts_pagination(
-			array(
-				'mid_size'  => 2,
-				'prev_text' => sprintf(
-					'%s <span class="nav-prev-text">%s</span>',
-					swiftionportfolio_get_icon_svg( 'chevron_left', 22 ),
-					__( 'Newer posts', 'swiftionportfolio' )
-				),
-				'next_text' => sprintf(
-					'<span class="nav-next-text">%s</span> %s',
-					__( 'Older posts', 'swiftionportfolio' ),
-					swiftionportfolio_get_icon_svg( 'chevron_right', 22 )
-				),
-			)
+	function swiftionportfolio_the_posts_navigation(\WP_Query $wp_query = null, $echo = true) {
+		if ( null === $wp_query ) {
+			global $wp_query;
+		}
+		$pages = paginate_links( [
+				'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+				'format'       => '?paged=%#%',
+				'current'      => max( 1, get_query_var( 'paged' ) ),
+				'total'        => $wp_query->max_num_pages,
+				'type'         => 'array',
+				'show_all'     => true,
+				'end_size'     => 3,
+				'mid_size'     => 1,
+				'prev_next'    => true,
+				'prev_text'    => __( 'Previous' ),
+				'next_text'    => __( 'Next' ),
+				'add_args'     => false,
+				'add_fragment' => ''
+			]
 		);
+		if ( is_array( $pages ) ) {
+			$pagination = '<nav class="swiftionportfolio-pagination"><ul class="pagination">';
+			foreach ($pages as $page) {
+							$pagination .= '<li class="page-item' . (strpos($page, 'current') !== false ? ' active' : '') . '"> ' . str_replace('page-numbers', 'page-link', $page) . '</li>';
+					}
+			$pagination .= '</ul></nav>';
+			if ( $echo ) {
+				echo $pagination;
+			} else {
+				return $pagination;
+			}
+		}
+		return null;
 	}
 endif;
 
