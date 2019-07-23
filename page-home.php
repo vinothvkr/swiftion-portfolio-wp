@@ -1,58 +1,21 @@
 <?php
 /**
- * The header for our theme
+ * The main template file
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
  * @subpackage Twenty_Nineteen
  * @since 1.0.0
  */
-?><!doctype html>
-<html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<link rel="profile" href="https://gmpg.org/xfn/11" />
-	<?php wp_head(); ?>
-</head>
 
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-
-    <nav class="navbar navbar-expand-xl fixed-top swiftion-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="#">Swiftion</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                </ul>
-
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#service">Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="/blog/">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+get_header();
+?>
 
     <header id="header" class="header">
         <div class="header-content">
@@ -187,43 +150,5 @@
         </div>
     </section>
 
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="blog footer-col">
-                        <h4>Blog</h4>
-                        <ul>
-                            <li><a href="https://www.swiftion.in/blog/2018/08/allow-action-method-to-be-accessed-only-by-anonymous-user-in-asp-net-core-mvc/">Allow action method to be accessed only by anonymous user in Asp.Net Core MVC</a></li>
-                            <li><a href="https://www.swiftion.in/blog/2018/08/logging-exceptions-into-database-with-asp-net-core/">Logging Exceptions into Database with Asp.Net Core</a></li>
-                            <li><a href="https://www.swiftion.in/blog/2018/07/enable-submit-button-if-at-least-one-input-has-value/">Enable submit button if at least one input has value</a></li>
-                            <li><a href="https://www.swiftion.in/blog/2018/07/how-to-setup-a-firewall-with-ufw-on-ubuntu-18-04/">How to setup a Firewall with UFW on Ubuntu 18.04</a></li>
-                            <li><a href="https://www.swiftion.in/blog/2018/07/how-to-install-znc-on-ubuntu-18-04/">How to install ZNC on Ubuntu 18.04</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4 footer-col"></div>
-                <div class="col-md-4">
-                    <div class="social footer-col">
-                        <h4>Social Media</h4>
-                        <span class="fa-stack"><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/vinoobubbly"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-twitter fa-stack-1x"></i></a></span>
-                        <span class="fa-stack"><a target="_blank" rel="noopener noreferrer" href="https://github.com/vinothvkr"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-github fa-stack-1x"></i></a></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6"></div>
-                    <div class="col-md-6 copyright">Swiftion All rights reserved. Powered by 
-                        <a href="https://wordpress.org/" target="_blank">Wordpress</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-<?php wp_footer(); ?>
-</body>
-</html>
+<?php
+get_footer();
