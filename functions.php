@@ -51,7 +51,9 @@ if ( ! function_exists( 'swiftionportfolio_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size( 1568, 9999 );
+
+		add_image_size( 'swiftionportfolio-featured', 730, 410, true );
+		add_image_size( 'swiftionportfolio-featured-fullwidth', 1140, 624, true );
 
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
@@ -188,21 +190,45 @@ function swiftionportfolio_widgets_init() {
 			'name'          => __( 'Sidebar', 'swiftionportfolio' ),
 			'id'            => 'sidebar-1',
 			'description'   => __( 'Add widgets here to appear in sidebar.', 'swiftionportfolio' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 	register_sidebar(
 		array(
-			'name'          => __( 'Footer', 'swiftionportfolio' ),
-			'id'            => 'sidebar-2',
+			'name'          => __( 'Footer Column 1', 'swiftionportfolio' ),
+			'id'            => 'footer-1',
 			'description'   => __( 'Add widgets here to appear in your footer.', 'swiftionportfolio' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Footer Column 2', 'swiftionportfolio' ),
+			'id'            => 'footer-2',
+			'description'   => __( 'Add widgets here to appear in your footer.', 'swiftionportfolio' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Footer Column 3', 'swiftionportfolio' ),
+			'id'            => 'footer-3',
+			'description'   => __( 'Add widgets here to appear in your footer.', 'swiftionportfolio' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 }
