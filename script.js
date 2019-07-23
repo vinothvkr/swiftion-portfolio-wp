@@ -9,9 +9,9 @@ $(function() {
 
     function shrinkNav(scrollTop) {
         if (scrollTop >= 50) {
-            $('nav').addClass('shrink');
+            $('nav.navbar').addClass('shrink');
         } else if (scrollTop < 50) {
-            $('nav').removeClass('shrink');
+            $('nav.navbar').removeClass('shrink');
         }
     }
 });

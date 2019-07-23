@@ -1,4 +1,4 @@
-/*! swiftion-portfolio 2019-07-18 */
+/*! swiftion-portfolio 2019-07-23 */
 /*!
  * jQuery JavaScript Library v3.4.1
  * https://jquery.com/
@@ -17823,9 +17823,9 @@ $(function() {
 
     function shrinkNav(scrollTop) {
         if (scrollTop >= 50) {
-            $('nav').addClass('shrink');
+            $('nav.navbar').addClass('shrink');
         } else if (scrollTop < 50) {
-            $('nav').removeClass('shrink');
+            $('nav.navbar').removeClass('shrink');
         }
     }
 });
