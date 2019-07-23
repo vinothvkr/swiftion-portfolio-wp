@@ -19,40 +19,14 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class('blog'); ?>>
+<body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'swiftionportfolio' ); ?></a>
-	<nav class="navbar navbar-expand-xl fixed-top swiftion-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="#">Swiftion</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                </ul>
-
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="/#header">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="/#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="/#service">Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll active" href="/blog/">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="/#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+	<?php if (is_front_page()) { 
+		get_template_part( 'template-parts/header/navbar', 'home' );
+	} else { 
+		get_template_part( 'template-parts/header/navbar' );
+	} ?>
+	
 	<div id="content" class="site-content">
