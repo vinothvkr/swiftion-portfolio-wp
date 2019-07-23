@@ -13,6 +13,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<?php swiftionportfolio_post_thumbnail() ?>
 		<?php
 		if ( is_sticky() && is_home() && ! is_paged() ) {
 			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'swiftionportfolio' ) );
@@ -21,13 +22,12 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php swiftionportfolio_post_thumbnail(); ?>
+	<div class="entry-meta">
+		<?php swiftionportfolio_entry_meta(); ?>
+	</div><!-- .entry-meta -->
 
 	<div class="entry-content">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php swiftionportfolio_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
