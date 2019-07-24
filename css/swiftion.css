@@ -17665,9 +17665,39 @@ svg {
 body.blog,
 body.single,
 body.archive,
-body.search {
+body.search,
+body.error404 {
   padding-top: 62px;
 }
+
+/* 404 Not found page */
+.error404 .not-found {
+  min-height: 500px;
+  text-align: center;
+}
+
+.error404 .not-found h1.page-title {
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 220px;
+  font-weight: 900;
+  margin: 0px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+.error404 .not-found .page-content {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.error404 .not-found .page-footer {
+  padding: 2rem 0;
+}
+
 /* NavBar */
 .navbar {
   background-color: #fff;
