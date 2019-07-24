@@ -236,10 +236,46 @@ if ( ! function_exists( 'swiftionportfolio_comment_form' ) ) :
 	function swiftionportfolio_comment_form( $order ) {
 		if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
 
+			$commenter = wp_get_current_commenter();
+			$req = get_option( 'require_name_email' );
+			$aria_req = ( $req ? " aria-required='true'" : '' );
+
+			$consent = empty( $commenter['comment_author_email'] ) ? '' : ' checked="checked"';	
+
+			$fields =  array(
+
+				'author' =>
+				  '<div class="form-group comment-form-author"><label for="author">' . __( 'Name', 'domainreference' ) .
+				  ( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
+				  '<input id="author" class="form-control author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+				  '" size="30"' . $aria_req . ( $req ? 'required' : '' )  . ' /></div>',
+			  
+				'email' =>
+				  '<div class="form-group comment-form-email"><label for="email">' . __( 'Email', 'domainreference' ) .
+				  ( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
+				  '<input id="email" class="form-control email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+				  '" size="30"' . $aria_req . ( $req ? 'required' : '' )  . ' /></div>',
+			  
+				'url' =>
+				  '<div class="form-group comment-form-url"><label for="url">' . __( 'Website', 'domainreference' ) . '</label>' .
+				  '<input id="url" class="form-control url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+				  '" size="30" /></div>',
+				
+				'cookies' =>
+				  '<div class="form-group"><div class="form-check comment-form-cookies-consent"><input id="wp-comment-cookies-consent" class="form-check-input wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />' .
+				  '<label class="form-check-label" for="wp-comment-cookies-consent">' . __( 'Save my name, email, and website in this browser for the next time I comment.' ) . '</label></div></div>'
+			  
+			);
+
 			comment_form(
 				array(
 					'logged_in_as' => null,
 					'title_reply'  => null,
+					'comment_field' =>  '<div class="form-group comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) .
+					'</label><textarea id="comment" class="form-control comment" name="comment" cols="45" rows="8" aria-required="true">' .
+						'</textarea></div>',
+					'fields' => apply_filters( 'comment_form_default_fields', $fields ),
+					'class_submit' => 'btn btn-primary'
 				)
 			);
 		}
