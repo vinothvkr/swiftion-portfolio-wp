@@ -1318,6 +1318,10 @@ body.page .main-navigation {
   margin-top: calc(3 * 1rem);
 }
 
+.entry:last-of-type {
+  margin-bottom: calc(3 * 1rem);
+}
+
 .entry .entry-header {
   position: relative;
 }
@@ -1992,15 +1996,7 @@ body.page .main-navigation {
 .archive .page-header,
 .search .page-header,
 .error404 .page-header {
-  margin: 1rem 1rem calc(3 * 1rem);
-}
-
-@media only screen and (min-width: 768px) {
-  .archive .page-header,
-  .search .page-header,
-  .error404 .page-header {
-    margin: 0 calc(10% + 60px) calc(10% + 60px);
-  }
+  margin: calc(3 * 1rem) 0;
 }
 
 .archive .page-header .page-title,
