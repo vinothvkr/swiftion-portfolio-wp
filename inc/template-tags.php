@@ -69,7 +69,7 @@ endif;
 
 if ( ! function_exists( 'swiftionportfolio_entry_meta' ) ) :
 	/**
-	 * Prints HTML with meta information for the categories, tags and comments.
+	 * Prints HTML with meta information for the categories and comments.
 	 */
 	function swiftionportfolio_entry_meta() {
 
@@ -129,6 +129,28 @@ if ( ! function_exists( 'swiftionportfolio_entry_meta' ) ) :
 			'<span class="edit-link">' . swiftionportfolio_get_icon_svg( 'edit', 16 ),
 			'</span>'
 		);
+	}
+endif;
+
+if ( ! function_exists( 'swiftionportfolio_entry_footer' ) ) :
+	/**
+	 * Prints HTML with meta information for the categories and comments.
+	 */
+	function swiftionportfolio_entry_footer() {
+		// Show only for post type
+		if ( 'post' === get_post_type() ) {
+			/* translators: used between list items, there is a space after the comma. */
+			$tags_list = get_the_tag_list( '', __( ', ', 'swiftionportfolio' ) );
+			if ( $tags_list ) {
+				printf(
+					/* translators: 1: SVG icon. 2: posted in label, only visible to screen readers. 3: list of tags. */
+					'<span class="tags-links">%1$s<span class="screen-reader-text">%2$s </span>%3$s</span>',
+					swiftionportfolio_get_icon_svg( 'tag', 16 ),
+					__( 'Tags:', 'swiftionportfolio' ),
+					$tags_list
+				); // WPCS: XSS OK.
+			}
+		}
 	}
 endif;
 
