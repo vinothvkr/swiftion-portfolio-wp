@@ -1,4 +1,4 @@
-/*! swiftion-portfolio 2019-07-23 */
+/*! swiftion-portfolio 2019-07-24 */
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -14462,6 +14462,30 @@ img {
   max-width: 100%;
 }
 
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+}
+
+code {
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+
 .site-branding,
 .main-navigation ul.main-menu > li,
 .social-navigation,
@@ -17697,10 +17721,12 @@ svg {
 }
 
 /* Custom */
-/* NavBar */
-body.blog {
+body.blog,
+body.single,
+body.archive {
   padding-top: 62px;
 }
+/* NavBar */
 .navbar {
   background-color: #fff;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
