@@ -24,8 +24,8 @@ get_header();
                     <div class="col-md-6">
                         <div class="header-content-left">
                             <h4>Hello I'm</h4>
-                            <h1>Vinoth Kumar</h1>
-                            <h2>Professional <span>.NET/C# Web Developer</span></h2>
+                            <h1><?php echo get_theme_mod('frontpage_header_primary_title'); ?></h1>
+                            <h2><?php echo get_theme_mod('frontpage_header_secondary_title'); ?></h2>
                             <div class="typewriter" id="typewriter">
                                 <span class="type"></span>
                                 <span class="cursor">_</span>

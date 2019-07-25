@@ -100,6 +100,42 @@ function swiftionportfolio_customize_register( $wp_customize ) {
 			'type'    => 'checkbox',
 		)
 	);
+
+	// Add Frontpage Header Primary Title setting and control
+	$wp_customize->add_setting(
+		'frontpage_header_primary_title',
+		array(
+			'default' => 'Vinoth Kumar',
+			'sanitize_callback' => ''
+		)
+	);
+
+	$wp_customize->add_control(
+		'frontpage_header_primary_title',
+		array(
+			'label' => 'Primary Title',
+			'type' => 'text',
+			'section' => 'static_front_page',
+		)
+	);
+
+	// Add Frontpage Header Secondary Title setting and control
+	$wp_customize->add_setting(
+		'frontpage_header_secondary_title',
+		array(
+			'default' => 'Professional .NET/C# Web Developer',
+			'sanitize_callback' => ''
+		)
+	);
+
+	$wp_customize->add_control(
+		'frontpage_header_secondary_title',
+		array(
+			'label' => 'Secondary Title',
+			'type' => 'text',
+			'section' => 'static_front_page',
+		)
+	);
 }
 add_action( 'customize_register', 'swiftionportfolio_customize_register' );
 
