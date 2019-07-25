@@ -39,9 +39,19 @@
 </div>
 <div class="col-md-4">
 	<div class="social footer-col">
-		<h2>Social Media</h2>
-		<span class="fa-stack"><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/vinoobubbly"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-twitter fa-stack-1x"></i></a></span>
-		<span class="fa-stack"><a target="_blank" rel="noopener noreferrer" href="https://github.com/vinothvkr"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-github fa-stack-1x"></i></a></span>
+		<?php if ( has_nav_menu( 'social-menu' ) ) { ?>
+			<aside class="widget-area" role="complementary" aria-label="Footer">
+				<div class="widget-column">
+					<div id="social-links" class="widget">
+						<h3 class="widget-title">Follow Me</h3>
+						<div id="social_wrap" class="social_wrap">
+							<?php swiftionportfolio_social_icons(); ?>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<h2></h2>
+		<?php } ?>
 	</div>
 </div>
 

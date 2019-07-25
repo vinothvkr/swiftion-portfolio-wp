@@ -1,4 +1,4 @@
-/*! swiftion-portfolio 2019-07-24 */
+/*! swiftion-portfolio 2019-07-25 */
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -14599,7 +14599,7 @@ a:active {
 }
 
 a:focus {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Navigation */
@@ -17840,51 +17840,6 @@ body.error404 {
   100% {opacity:1;}
 }
 
-/* Footer */
-.site-footer {
-  background-color: #313233;
-  color: #999999;
-  padding-top: 3rem;
-}
-.site-footer .widget_archive ul li,
-.site-footer .widget_categories ul li,
-.site-footer .widget_meta ul li,
-.site-footer .widget_nav_menu ul li,
-.site-footer .widget_pages ul li,
-.site-footer .widget_recent_comments ul li,
-.site-footer .widget_recent_entries ul li,
-.site-footer .widget_rss ul li {
-  border-bottom: 1px solid #444;
-}
-.site-footer .widget .widget-title {
-  margin-bottom: 25px;
-  color: #999;
-}
-.site-footer a {
-  color: #DADADA;
-}
-.site-footer .social .fa-stack {
-  font-size: 1.5rem;
-}
-.site-footer .social .fa-stack .fa-stack-2x {
-  color: #dadada;
-}
-.site-footer .social .fa-stack .fa-stack-1x {
-  color: #333;
-}
-.site-footer footer {
-  background-color: #1F1F1F;
-  padding: 1.5rem 0;
-  border-top: 1px solid #3A3A3A;
-}
-.site-footer .copyright {
-  margin-top: 0.5px;
-  float: right;
-  text-align: right;
-  color: #999;
-  font-size: 12px;
-}
-
 /* Page Navigation */
 .swiftionportfolio-pagination {
   margin: 20px 0 30px 0;
@@ -17898,4 +17853,219 @@ body.error404 {
 .page-link {
   color: #4c6ef5;
 }
+
+/* Footer */
+.site-footer {
+  background-color: #313233;
+  color: #999999;
+  padding-top: 3rem;
+}
+
+.site-footer .widget_archive ul li,
+.site-footer .widget_categories ul li,
+.site-footer .widget_meta ul li,
+.site-footer .widget_nav_menu ul li,
+.site-footer .widget_pages ul li,
+.site-footer .widget_recent_comments ul li,
+.site-footer .widget_recent_entries ul li,
+.site-footer .widget_rss ul li {
+  border-bottom: 1px solid #444;
+}
+
+.site-footer .widget .widget-title {
+  margin-bottom: 25px;
+  color: #999;
+}
+
+.site-footer a {
+  color: #dadada;
+}
+
+.site-footer a:hover {
+  color: #888;
+}
+
+.site-footer footer {
+  background-color: #1F1F1F;
+  padding: 1.5rem 0;
+  border-top: 1px solid #3A3A3A;
+}
+
+.site-footer .copyright {
+  margin-top: 0.5px;
+  float: right;
+  text-align: right;
+  color: #999;
+  font-size: 12px;
+}
+
+/* Social links */
+#menu-social li, 
+#menu-social ul {
+  border: 0 !important;
+  list-style: none;
+  padding-left: 0;
+
+}
+
+#menu-social li {
+  display: inline-block;
+}
+
+#menu-social li a {
+  color: #333;
+  margin-right: 7px;
+  font-size: 18px;
+  line-height: 40px;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  background-color: #dadada;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+#menu-social li a:hover {
+  color: #dadada;
+  background-color: #666;
+}
+
+#menu-social li a span {
+  display: none;
+}
+
+#menu-social li a[href*="twitter.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f099"
+}
+
+#menu-social li a[href*="xing.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f168"
+}
+
+#menu-social li a[href*="facebook.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f39e";
+  font-weight: 900;
+}
+
+#menu-social li a[href*="github.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f09b"
+}
+
+#menu-social li a[href*="gitlab.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f296"
+}
+
+#menu-social li a[href*="stackoverflow.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f16c"
+}
+
+#menu-social li a[href*="/feed"]:before {
+  font-family: 'Font Awesome\ 5 Free';
+  content: "\f09e";
+  font-weight: 900;
+}
+
+#menu-social li a[href*="dribbble.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f17d"
+}
+
+#menu-social li a[href*="skype.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f17e"
+}
+
+#menu-social li a[href*="foursquare.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f180"
+}
+
+#menu-social li a[href*="spotify.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f1bc"
+}
+
+#menu-social li a[href*="soundcloud.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f1be"
+}
+
+#menu-social li a[href*="vimeo.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f194"
+}
+
+#menu-social li a[href*="youtube.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f167"
+}
+
+#menu-social li a[href*="instagram.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f16d"
+}
+
+#menu-social li a[href*="flickr.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f16e"
+}
+
+#menu-social li a[href*="tumblr.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f173"
+}
+
+#menu-social li a[href*="pinterest.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f0d2"
+}
+
+#menu-social li a[href*="plus.google.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f0d5"
+}
+
+#menu-social li a[href*="linkedin.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f0e1"
+}
+
+#menu-social li a[href*="slideshare.net"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f1e7"
+}
+
+#menu-social li a[href*="mailto"]:before {
+  font-family: 'Font Awesome\ 5 Free';
+  content: "\f0e0"
+}
+
+#menu-social li a[href*="t.me"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f2c6"
+}
+
+#menu-social li a[href*="telegram.me"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f2c6"
+}
+
+#menu-social li a[href*="docker.com"]:before {
+  font-family: 'Font Awesome\ 5 Brands';
+  content: "\f395"
+}
+
 /*# sourceMappingURL=swiftion.css.map */

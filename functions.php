@@ -60,7 +60,7 @@ if ( ! function_exists( 'swiftionportfolio_setup' ) ) :
 			array(
 				'menu-1' => __( 'Primary', 'swiftionportfolio' ),
 				'footer' => __( 'Footer Menu', 'swiftionportfolio' ),
-				'social' => __( 'Social Links Menu', 'swiftionportfolio' ),
+				'social-menu' => __( 'Social Links Menu', 'swiftionportfolio' ),
 			)
 		);
 
@@ -360,6 +360,11 @@ require get_template_directory() . '/inc/template-tags.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Template extras.
+ */
+require get_template_directory() . '/inc/extras.php';
 
 /**
  * Disable Admin Bar for all Users.
