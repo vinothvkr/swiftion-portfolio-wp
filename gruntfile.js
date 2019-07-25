@@ -61,7 +61,11 @@ module.exports = function(grunt) {
                         dest: 'webfonts/'
                     }
                 ]
-            }
+            },
+            build: {
+                src: ['**', '!node_modules/**', '!gruntfile.js', '!package.json', '!package-lock.json'],
+                dest: 'build/',
+            },
         },
         watch: {
             css: {
@@ -72,14 +76,74 @@ module.exports = function(grunt) {
                 files: ['script.js'],
                 tasks: ['concat:js', 'uglify']
             }
+        },
+        clean: {
+            build: {
+                src: ['build/']
+            }
+        },
+        version: {
+            css: {
+                options: {
+                    prefix: 'Version\\:\\s'
+                },
+                src: ['style.css']
+            },
+            // php: {
+            //     options: {
+            //         prefix: '\@version\\s+'
+            //     },
+            //     src: [ 'functions.php' ]
+            // },
+        },
+        gitcommit: {
+            version: {
+                options: {
+                    message: 'new version: <%= pkg.version %>'
+                },
+                files: {
+                    src: ['style.css', 'package.json']
+                }
+            }
+        },
+        gittag: {
+            version: {
+                options: {
+                    tag: 'v<%= pkg.version %>',
+                    message: 'tagging version <%= pkg.version %>'
+                }
+            }
+        },
+        gitpush: {
+            version: {},
+            tag: {
+                options: {
+                    tags: true
+                }
+            }
+        },
+        compress: {
+            build: {
+                options: {
+                    archive: 'build/<%= pkg.name %>.<%= pkg.version %>.zip'
+                },
+                expand: true,
+                cwd: 'build/',
+                src: ['**/*'],
+                dest: '<%= pkg.name %>/'
+            }
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-git');
+    grunt.loadNpmTasks('grunt-version');
 
     grunt.registerTask('default', ['concat', 'uglify', 'cssmin', 'copy:fonts']);
 };
