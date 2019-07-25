@@ -262,7 +262,6 @@ function swiftionportfolio_scripts() {
 		wp_enqueue_script( 'swiftionportfolio-touch-navigation', get_theme_file_uri( '/js/touch-keyboard-navigation.js' ), array(), '1.1', true );
 	}
 
-	wp_enqueue_style( 'swiftionportfolio-print-style', get_template_directory_uri() . '/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 	wp_enqueue_style( 'swiftionportfolio-theme-style', get_template_directory_uri() . '/css/swiftion.min.css', array(), wp_get_theme()->get( 'Version' ), 'all' );
 
 	wp_enqueue_script( 'swiftionportfolio-theme-script', get_template_directory_uri() . '/js/swiftion.min.js', array(), wp_get_theme()->get( 'Version' ), true );
