@@ -15,15 +15,8 @@ Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-me
 Swiftion Portfolio is based on Twenty Nineteen theme by Wordpress
 */
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #111;
-  /* font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif; */
-  font-weight: 400;
-  font-size: 1em;
-  line-height: 1.8;
-  margin: 0;
-  text-rendering: optimizeLegibility;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.7;
 }
 
 img {
@@ -53,6 +46,22 @@ pre {
 code {
   background-color: #f9f2f4;
   border-radius: 4px;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
 .site-branding,
@@ -1332,6 +1341,7 @@ body.page .main-navigation {
 
 .entry .entry-title {
   padding-bottom: 10px;
+  color: #333333;
 }
 
 .entry .entry-title a {
@@ -1384,6 +1394,7 @@ body.page .main-navigation {
 
 .entry .entry-meta {
   margin: 1rem 0 1.5rem 0;
+  font-size: 0.9em;
 }
 
 .entry .entry-footer {
@@ -2065,6 +2076,8 @@ body.page .main-navigation {
 .widget .widget-title {
   margin-bottom: 25px;
   color: #636467;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 .widget select {
   max-width: 100%;
@@ -2088,7 +2101,6 @@ body.page .main-navigation {
 .widget_rss ul {
   padding: 0;
   list-style: none;
-  line-height: 18px;
 }
 
 .widget_archive ul li,
@@ -3068,6 +3080,19 @@ svg {
   fill: currentColor;
 }
 
+.single-featured {
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  display: block;
+  margin: auto;
+}
+
+.single-featured:hover {
+  opacity: 0.8;
+}
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
@@ -3212,7 +3237,7 @@ svg {
 }
 
 /* Sidebar */
-#secondary .widget-column {
+.sidebar .widget-column {
   margin: calc(3 * 1rem) 0 1rem;
   position: relative;
   border-left: 1px solid #efefef;
@@ -3220,14 +3245,10 @@ svg {
 }
 
 @media (max-width: 767px) {
-  #secondary .widget-column {
+  .sidebar .widget-column {
     padding-left: 0;
     border-left: none;
   }
-}
-
-#secondary h3 {
-  color: #636467;
 }
 
 /* Custom */
