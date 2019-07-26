@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Nineteen: Customizer
+ * Swiftion Portfolio: Customizer
  *
  * @package WordPress
  * @subpackage Twenty_Nineteen

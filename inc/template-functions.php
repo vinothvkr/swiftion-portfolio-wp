@@ -112,7 +112,7 @@ function swiftionportfolio_image_filters_enabled() {
 /**
  * Add custom sizes attribute to responsive image functionality for post thumbnails.
  *
- * @origin Twenty Nineteen 1.0
+ * @origin Swiftion Portfolio 1.0
  *
  * @param array $attr  Attributes for the image markup.
  * @return string Value for use in post thumbnail 'sizes' attribute.

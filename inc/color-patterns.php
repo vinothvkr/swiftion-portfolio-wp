@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Nineteen: Color Patterns
+ * Swiftion Portfolio: Color Patterns
  *
  * @package WordPress
  * @subpackage swiftionportfolio
@@ -18,9 +18,9 @@ function swiftionportfolio_custom_colors_css() {
 	}
 
 	/**
-	 * Filter Twenty Nineteen default saturation level.
+	 * Filter Swiftion Portfolio default saturation level.
 	 *
-	 * @since Twenty Nineteen 1.0
+	 * @since Swiftion Portfolio 1.0
 	 *
 	 * @param int $saturation Color saturation level.
 	 */
@@ -28,9 +28,9 @@ function swiftionportfolio_custom_colors_css() {
 	$saturation = absint( $saturation ) . '%';
 
 	/**
-	 * Filter Twenty Nineteen default selection saturation level.
+	 * Filter Swiftion Portfolio default selection saturation level.
 	 *
-	 * @since Twenty Nineteen 1.0
+	 * @since Swiftion Portfolio 1.0
 	 *
 	 * @param int $saturation_selection Selection color saturation level.
 	 */
@@ -38,9 +38,9 @@ function swiftionportfolio_custom_colors_css() {
 	$saturation_selection = $saturation_selection . '%';
 
 	/**
-	 * Filter Twenty Nineteen default lightness level.
+	 * Filter Swiftion Portfolio default lightness level.
 	 *
-	 * @since Twenty Nineteen 1.0
+	 * @since Swiftion Portfolio 1.0
 	 *
 	 * @param int $lightness Color lightness level.
 	 */
@@ -48,9 +48,9 @@ function swiftionportfolio_custom_colors_css() {
 	$lightness = absint( $lightness ) . '%';
 
 	/**
-	 * Filter Twenty Nineteen default hover lightness level.
+	 * Filter Swiftion Portfolio default hover lightness level.
 	 *
-	 * @since Twenty Nineteen 1.0
+	 * @since Swiftion Portfolio 1.0
 	 *
 	 * @param int $lightness_hover Hover color lightness level.
 	 */
@@ -58,9 +58,9 @@ function swiftionportfolio_custom_colors_css() {
 	$lightness_hover = absint( $lightness_hover ) . '%';
 
 	/**
-	 * Filter Twenty Nineteen default selection lightness level.
+	 * Filter Swiftion Portfolio default selection lightness level.
 	 *
-	 * @since Twenty Nineteen 1.0
+	 * @since Swiftion Portfolio 1.0
 	 *
 	 * @param int $lightness_selection Selection color lightness level.
 	 */
@@ -259,9 +259,9 @@ function swiftionportfolio_custom_colors_css() {
 	}
 
 	/**
-	 * Filters Twenty Nineteen custom colors CSS.
+	 * Filters Swiftion Portfolio custom colors CSS.
 	 *
-	 * @since Twenty Nineteen 1.0
+	 * @since Swiftion Portfolio 1.0
 	 *
 	 * @param string $css           Base theme colors CSS.
 	 * @param int    $primary_color The user's selected color hue.
