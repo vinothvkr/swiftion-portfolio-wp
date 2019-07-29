@@ -1,4 +1,4 @@
-/*! swiftion-portfolio 2019-07-26 */
+/*! swiftion-portfolio 2019-07-29 */
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -17761,6 +17761,16 @@ body.error404 {
   -o-transition: all .3s ease-out 0s;
   transition: all .3s ease-out 0s;
 }
+
+@media (min-width: 1200px){
+  .navbar-expand-xl .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: .5rem;
+    margin-left: .5rem;
+  }
+}
+
 .home .navbar {
   padding: 1.5rem 1.5rem;
 }
