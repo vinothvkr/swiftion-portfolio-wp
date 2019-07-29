@@ -1,4 +1,4 @@
-/*! swiftion-portfolio 2019-07-23 */
+/*! swiftion-portfolio 2019-07-29 */
 /*!
  * jQuery JavaScript Library v3.4.1
  * https://jquery.com/
@@ -17927,5 +17927,7 @@ $(function() {
 //     });
 // });
 
-
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
 //# sourceMappingURL=swiftion.js.map
