@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-xl fixed-top swiftion-navbar">
+<nav class="navbar navbar-expand-xl fixed-top swiftion-navbar navbar-light">
     <div class="container">
         <a class="navbar-brand page-scroll" href="#header"><i class="fas fa-fire fa-rotate-270 fa-lg"></i> Swiftion</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
