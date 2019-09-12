@@ -1,4 +1,4 @@
-/*! swiftion-portfolio 2019-07-29 */
+/*! swiftion-portfolio 2019-09-12 */
 /*!
  * jQuery JavaScript Library v3.4.1
  * https://jquery.com/

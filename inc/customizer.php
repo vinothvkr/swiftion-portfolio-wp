@@ -106,7 +106,7 @@ function swiftionportfolio_customize_register( $wp_customize ) {
 		'frontpage_header_primary_title',
 		array(
 			'default' => 'Vinoth Kumar',
-			'sanitize_callback' => ''
+			'sanitize_callback' => 'wp_filter_nohtml_kses'
 		)
 	);
 
@@ -124,7 +124,7 @@ function swiftionportfolio_customize_register( $wp_customize ) {
 		'frontpage_header_secondary_title',
 		array(
 			'default' => 'Professional .NET/C# Web Developer',
-			'sanitize_callback' => ''
+			'sanitize_callback' => 'wp_filter_nohtml_kses'
 		)
 	);
 
@@ -142,7 +142,7 @@ function swiftionportfolio_customize_register( $wp_customize ) {
 		'frontpage_about_description',
 		array(
 			'default' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer feugiat scelerisque varius morbi enim nunc faucibus a. Pellentesque habitant morbi tristique senectus et. Proin fermentum leo vel orci porta non pulvinar neque. Tellus molestie nunc non blandit massa. Viverra mauris in aliquam sem. Ac turpis egestas integer eget aliquet nibh. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. Magnis dis parturient montes nascetur ridiculus mus mauris vitae. Ultrices sagittis orci a scelerisque purus semper eget duis. Sed enim ut sem viverra aliquet eget sit amet. Sed viverra tellus in hac habitasse platea dictumst. Facilisis mauris sit amet massa vitae. Nec feugiat nisl pretium fusce. Iaculis eu non diam phasellus vestibulum lorem. Tristique senectus et netus et malesuada fames.',
-			'sanitize_callback' => ''
+			'sanitize_callback' => 'wp_filter_nohtml_kses'
 		)
 	);
 
@@ -150,7 +150,7 @@ function swiftionportfolio_customize_register( $wp_customize ) {
 		'frontpage_about_description',
 		array(
 			'label' => 'About',
-			'type' => 'text',
+			'type' => 'textarea',
 			'section' => 'static_front_page',
 		)
 	);
