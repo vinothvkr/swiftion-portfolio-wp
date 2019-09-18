@@ -1,4 +1,4 @@
-/*! swiftion-portfolio 2019-09-18 */
+/*! swiftionportfolio 2019-09-18 */
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -14437,7 +14437,7 @@ Author: Vinoth Kumar
 Author URI: https://www.swiftion.in/
 Description: A simple theme for developers who wants to show their portfolio and blog.
 Requires at least: WordPress 4.9.6
-Version: 0.2.0-beta
+Version: 0.2.2-beta
 License: MIT License
 License URI: LICENSE
 Text Domain: swiftionportfolio
@@ -18121,6 +18121,6 @@ body.error404 {
 
 /* Disqus */
 #disqus_thread {
-  margin-bottom: calc(3 * 1rem) 0;
+  margin-bottom: calc(3 * 1rem);
 }
 /*# sourceMappingURL=swiftion.css.map */
