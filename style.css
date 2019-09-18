@@ -3687,3 +3687,8 @@ body.error404 {
   font-family: 'Font Awesome\ 5 Brands';
   content: "\f395"
 }
+
+/* Disqus */
+#disqus_thread {
+  margin-bottom: calc(3 * 1rem) 0;
+}
