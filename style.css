@@ -3690,5 +3690,5 @@ body.error404 {
 
 /* Disqus */
 #disqus_thread {
-  margin-bottom: calc(3 * 1rem) 0;
+  margin-bottom: calc(3 * 1rem);
 }
