@@ -63,7 +63,7 @@ module.exports = function(grunt) {
                 ]
             },
             build: {
-                src: ['**', '!node_modules/**', '!gruntfile.js', '!package.json', '!package-lock.json'],
+                src: ['**', '!build/**', '!node_modules/**', '!gruntfile.js', '!package.json', '!package-lock.json'],
                 dest: 'build/',
             },
         },
