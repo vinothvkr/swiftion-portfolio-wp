@@ -3254,6 +3254,7 @@ svg {
 /* Custom */
 body.blog,
 body.single,
+body.page,
 body.archive,
 body.search,
 body.error404 {
