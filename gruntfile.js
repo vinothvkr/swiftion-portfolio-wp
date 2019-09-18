@@ -146,4 +146,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-version');
 
     grunt.registerTask('default', ['concat', 'uglify', 'cssmin', 'copy:fonts']);
+    grunt.registerTask('release', ['version', 'gitcommit', 'gittag', 'gitpush']);
+    grunt.registerTask('build', ['clean', 'copy:build', 'compress']);
+    grunt.registerTask('releasebuild', ['release', 'build']);
 };
